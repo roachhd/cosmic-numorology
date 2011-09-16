@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Love Calculator</title>
+</head>
+<script language="javascript" type="text/javascript">
+
+    function ascii_value(c) {
+        // restrict input to a single character
+        c = c.charAt(0);
+
+        // loop through all possible ASCII values
+        var i;
+        for (i = 0; i < 256; ++i) {
+            // convert i into a 2-digit hex string
+            var h = i.toString(16);
+            if (h.length == 1)
+                h = "0" + h;
+
+            // insert a % character into the string
+            h = "%" + h;
+
+            // determine the character represented by the escape code
+            h = unescape(h);
+
+            // if the characters match, we've found the ASCII value
+            if (h == c)
+                break;
+        }
+        return i;
+    }
+
+
+   
+   
+    function calculateCompatibility(form) {
+       first = form.fname.value.toUpperCase();
+       firstlength = form.fname.value.length;
+second = form.lname.value.toUpperCase();
+secondlength = form.lname.value.length;
+var LoveCount=0;
+var value = 0; 
+
+for (Count=0; Count < firstlength; Count++) {
+    letter1 = first.substring(Count, Count + 1);
+    LoveCount += ascii_value(letter1);
+
+}
+
+for (Count=0; Count < secondlength; Count++) {
+    letter2 = second.substring(Count, Count + 1);
+    LoveCount = LoveCount - ascii_value(letter2 + "");
+}
+
+amount = 0;
+if (LoveCount > 0) {
+    if (LoveCount > 0) amount = 5 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 2) amount = 10 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 4) amount = 20 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 6) amount = 30 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 8) amount = 40 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 10) amount = 50 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 12) amount = 60 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 14) amount = 70 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 16) amount = 80 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 18) amount = 90 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 20) amount = 100 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 22) amount = 110 - ((firstlength + secondlength) / 2)
+
+    if (firstlength == 0 || secondlength == 0) amount = "Err";
+    if (amount < 0) amount = 0;
+    if (amount > 99) amount = 99;
+    value = amount + Math.floor(Math.random() * 11);
+    if (value > 100)
+        value = 99;
+    form.res.value = value + "% More From Boy Than Girl";
+    switch (value/10) {
+        case 1:
+            window.open("1.html");
+            break;
+        case 2:
+            window.open("2.html");
+            break;
+        case 3:
+            window.open("3.html");
+            break;
+        case 4:
+            window.open("4.html");
+            break;
+        case 4:
+            window.open("4.html");
+            break; 
+        case 5:
+            window.open("5.html");
+            break; 
+        case 6:
+            window.open("6.html");
+            break; 
+        case 7:
+            window.open("7.html");
+            break; 
+        case 8:
+            window.open("8.html");
+            break; 
+        case 9:
+            window.open("9.html");
+            break; 
+        default: window.open("1.html");
+            break;
+
+    }
+}
+else {
+    LoveCount = LoveCount * -1;
+    if (LoveCount > 0) amount = 5 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 2) amount = 10 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 4) amount = 20 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 6) amount = 30 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 8) amount = 40 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 10) amount = 50 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 12) amount = 60 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 14) amount = 70 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 16) amount = 80 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 18) amount = 90 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 20) amount = 100 - ((firstlength + secondlength) / 2)
+    if (LoveCount > 22) amount = 110 - ((firstlength + secondlength) / 2)
+
+    if (firstlength == 0 || secondlength == 0) amount = "Err";
+    if (amount < 0) amount = 0;
+    if (amount > 99) amount = 99;
+    value = 100 - amount + Math.floor(Math.random() * 11);
+    if (value > 100)
+        value = 99;
+     form.res.value = value + "%" + " More From the Girl than Boy";
+
+    switch (value / 10) 
+     {
+
+         case 1:
+             window.open("1.html");
+             break;
+         case 2:
+             window.open("2.html");
+             break;
+        case 3:
+            window.open("3.html");
+            break;
+        case 4:
+            window.open("4.html");
+            break;
+        case 4:
+            window.open("4.html");
+            break; 
+        case 5:
+            window.open("5.html");
+            break; 
+        case 6:
+            window.open("6.html");
+            break; 
+        case 7:
+            window.open("7.html");
+            break; 
+        case 8:
+            window.open("8.html");
+            break; 
+        case 9:
+            window.open("9.html");
+            break;
+         default: 
+		 window.open("1.html");
+            break; 
+
+     }
+
+}
+}
+
+
+
+    
+    </script>
+
+<body background="g.gif">
+<form>
+<br><h2><center><i><b><font color="#FF0099"> Love Calculator</h2></b></i></center>
+
+
+<hr />
+
+
+
+<pre>
+
+<font face="Times New Roman, Times, serif" size="+1" color="#990099"/>
+ 
+	                      			                    <b><i>Please Enter Your Name</i> 		                               <b><i>Please Enter Your Partner's Name</i>  <br /><center><img src="h5.jpg" height="75" widht="75" /> </center>								                                                              <input type="text" name="fname" value=""  /></b>                                                     			    
+                                                                                                    <input type="text" name="lname" value=""  /> 
+</b>                             					
+ 
+ 
+     
+                                                                                                                                                               <input type="button" name="lovecalc" value="Calculate"  <input type="button" name="lovecalc" value="Compatibility"onclick = "calculateCompatibility(this.form)" />   
+                                                                               
+ 	                                              <center><b><i> Your Love Percentage is</b></i>
+
+<font face="Times New Roman, Times, serif" size="+1" color="#990099"/>
+ 
+	                      					 <b>                                                     			    
+<input type="text" size="30" name="res" value=""  />
+<input type="button" name="lovecalc" value="Compatibility"onclick = "calculateCompatibility(this.form)" /> </b></font></center>
+        
+
+ 			                                                                               	  <input type="reset" name="clear" value="Reset" /> <input type="button" value=" Return to Previous Page"  onclick="window.location.href='Numerology1.html'" /> 
+</pre>
+ </center>
+ </form>
+</body>
+</html>
