@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Cosmic Calculator </title>
+
+
+
+</head>
+<script language="javascript" type="text/javascript">
+    function CalcualteBirthPath(form) {
+     var  num = parseInt(form.day.value) +parseInt( form.month.value )+parseInt( form.year.value);
+        
+    var  sum = 0;
+        while (num > 0.99) 
+        {
+            var t = num % 10;
+            sum += parseInt(t+"");
+          
+            while (sum > 10) {
+                sum = (sum / 10 + sum % 10);
+               
+            }
+            num = num / 10;
+        }
+      var dsum = 0;
+     
+          dsum = parseInt(sum+"");
+        form.path.value = parseInt(dsum);
+    }
+    </script>
+    <script language="javascript" type="text/javascript">
+        function showPage(form) 
+        {
+            var value = form.path.value;
+            alert(form.path.value);
+         if (value == 0) 
+         {
+            var num = parseInt(form.day.value) + parseInt(form.month.value) + parseInt(form.year.value);
+
+            var sum = 0;
+            while (num > 0)
+             {
+                 sum += num % 10;
+                
+                while (sum >= 10) 
+                {
+                    sum = sum / 10 + sum % 10;
+                }
+                num = num / 10;
+            }
+             var dsum = 0;
+
+            dsum = sum;
+            form.path.value = parseInt(dsum);
+            }
+           
+
+       
+        switch (parseInt(form.path.value)) 
+        {
+         
+            case 1:
+                window.open("path1.html");
+                break
+            case 2:
+                window.open("path2.html");
+                break
+			case 3:
+                window.open("path3.html");
+                break
+			case 4:
+                window.open("path4.html");
+                break
+			case 5:
+                window.open("path5.html");
+                break
+			case 6:
+                window.open("path6.html");
+                break
+			case 7:
+                window.open("path7.html");
+                break
+			case 8:
+                window.open("path8.html");
+                break
+			case 9:
+                window.open("path9.html");
+                break
+			case 11:
+                window.open("path11.html");
+                break
+			case 22:
+                window.open("path22.html");
+                break
+            default:
+              
+               window.open("1.html");
+                break
+
+        }
+
+    }
+  </script>
+
+ <body background="s.jpg">
+ <form>
+<br><h2><center><i><b><font color="#990099"> Cosmic Numerology</h2></b></i></center>
+<hr />
+<br />
+<center> <u><i><b><font size="+1" color="#CC0033">Please Enter your Details Below </font> </u></b> </i></b></center>
+ <center>
+</b>
+<pre>
+ <font face="Times New Roman, Times, serif" color="#990099"/>
+	<b><i>First Name</i>  </b>                      <input type="text" name="fname" value=""  /></br>
+
+        <b><i>Surname</i> </b>                           <input type="text" name="Sname" valur="" /></br>
+
+	<b><i>Date of Birth (1 - 31)</i> </b>       <input type="number" max="31" min="1" name="day" value="" /></br>
+                            
+        <b><i>Month of Birth (1 - 12)</i> </b>   <input type="number" min="1" max="12" name="month" value="" /></br>
+                            
+        <b><i> Year of Birth (xxxx)</i> </b>        <input type="number" min="1901" max="2011" name="year" value="" /></br>
+
+	</centre>  <input type="button" name="generate" value="Generate Birth Path Number" onclick="CalcualteBirthPath(this.form)"/>      
+   <center> Your <b> <i> Birth Path Number is   <input id="Text1" type="text" 
+           name="path" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <font face="Times New Roman, Times, serif" color="#990099"/>
+              <input type="button" name="generate1" 
+             value="View your Characteristics" onclick = "showPage(this.form)"/></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <font face="Times New Roman, Times, serif" color="#990099"/>
+         <input type="button" onclick="window.location.href='Lovecalc1.html'" name="lovecalc" value="Start Love Calculator"           
+         </form></font></center>
+              &nbsp;                                               
+</body>
+</html>
